@@ -79,7 +79,7 @@ ___
     For online documentation and support please refer to nginx.org.
     Commercial support is available at nginx.com.
     
-    <i>Thank you for using nginx.</i>
+    <em>Thank you for using nginx.</em>
 
    
 ### Удаление инстанса:
