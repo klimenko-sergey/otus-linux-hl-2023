@@ -1,0 +1,12 @@
+---
+# tasks file for nginx
+- name: apt update
+  ansible.builtin.apt:
+    update_cache: yes
+- name: Wait for sudo
+  become: yes
+  shell:  while sudo fuser /var/lib/dpkg/lock >/dev/null 2>&1; do sleep 5; done;
+
+- name: Show info about the env this host belongs to
+  debug:
+    msg: "This host is in {{ env }} environment."
