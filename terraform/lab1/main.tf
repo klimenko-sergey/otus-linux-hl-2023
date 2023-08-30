@@ -66,7 +66,7 @@ resource "local_file" "generate_script" {
 resource "terraform_data" "ansible" {
   provisioner "local-exec" {
     command     = "sh ../scripts/ansible_run_scripts.sh"
-    interpreter = ["/bin/bash", "-c"]
+    interpreter = ["/bin/sh", "-c"]
   }
   depends_on = [local_file.generate_script]
 }
