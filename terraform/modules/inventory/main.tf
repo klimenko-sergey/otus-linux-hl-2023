@@ -17,5 +17,6 @@ resource "local_file" "generate_inventory" {
 
   provisioner "local-exec" {
     command = "chmod a-x inventory && mv inventory ../../ansible/inventory"
+    interpreter = ["/bin/sh", "-c"]
   }
 }

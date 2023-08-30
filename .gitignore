@@ -40,6 +40,9 @@ terraform.rc
 # Ignore script of ping status
 ansible_run_scripts.sh
 
+# Ignore Ansible inventory file
+inventory
+
 # Ignore Ansible Galaxy
 jdauphant.nginx
 
