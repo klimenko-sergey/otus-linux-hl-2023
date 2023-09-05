@@ -15,17 +15,25 @@ Administrator Linux. Advanced
  * Создать сервисный аккаунт:
    ```bash
    SVC_ACCT="<service_account_name>"
-   FOLDER_ID="<get _from_yc_config_list>"
+   ```
+   ```bash
+   FOLDER_ID="<get_from_yc_config_list>"
+   ```
+   ```bash
    yc iam service-account create --name $SVC_ACCT --folder-id $FOLDER_ID
    ```
  * Выдать права сервисному аккаунту:
    ```bash
    ACCT_ID=$(yc iam service-account get $SVC_ACCT | grep ^id | awk '{print $2}')
+   ```
+   ```bash
    yc resource-manager folder add-access-binding --id $FOLDER_ID --role editor --service-account-id $ACCT_ID
    ```
  * Получить IAM-токен для сервисного аккаунта:
    ```bash
    mkdir ~/keys
+   ```
+   ```bash
    yc iam key create --service-account-name <service_account> --output ~/keys/key.json
    ```
 
