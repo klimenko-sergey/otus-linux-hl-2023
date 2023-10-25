@@ -1,6 +1,6 @@
 ---
-- name: Configure App
-  hosts: nginx-app
+- name: Configure NGINX
+  hosts: nginx
   become: true
 
   roles:

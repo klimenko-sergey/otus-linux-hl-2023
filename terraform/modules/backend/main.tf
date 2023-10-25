@@ -15,12 +15,13 @@ provider "yandex" {
   zone                     = var.zone
 }
 
-resource "yandex_compute_instance" "nginx" {
-  name = "nginx-app"
+resource "yandex_compute_instance" "backend" {
+  count = 2
+  name = "backend-${count.index}"
   labels = {
-    tags = "nginx-app"
+    tags = "backend-${count.index}"
   }
-  hostname = "nginx-app"
+  hostname = "backend-${count.index}"
 
   resources {
     cores  = 2
@@ -35,7 +36,7 @@ resource "yandex_compute_instance" "nginx" {
 
   network_interface {
     subnet_id = var.m_subnet_id
-    nat       = true
+    nat       = false
   }
 
   metadata = {

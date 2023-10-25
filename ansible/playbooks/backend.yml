@@ -1,0 +1,14 @@
+---
+- name: Deploy WordPress
+  hosts: backend
+  become: true
+
+  roles:
+    - backend
+    # - inmotionhosting.wordpress
+    # - inmotionhosting.apache
+    # - inmotionhosting.mysql
+    # - inmotionhosting.php_fpm
+    # - inmotionhosting.nginx_proxy
+    # - Oefenweb.wordpress
+    - MakarenaLabs.wordpress

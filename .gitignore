@@ -48,6 +48,15 @@ inventory
 
 # Ignore Ansible Galaxy
 jdauphant.nginx
+geerlingguy.mysql
+inmotionhosting.wordpress
+inmotionhosting.apache
+inmotionhosting.mysql
+inmotionhosting.php_fpm
+inmotionhosting.nginx_proxy
+Oefenweb.wordpress
+MakarenaLabs.wordpress
+githubixx.ansible_role_wireguard
 
 # Ignore Vault key
 vault.key

@@ -1,0 +1,12 @@
+wp_install_dir: '/var/www/html'
+wp_mysql_db: 'wordpress'
+wp_mysql_user: 'user'
+wp_mysql_password: 'P@$$w0rd'
+wp_db_host: '${db_ip}'
+wp_db_charset: 'utf8'
+wp_db_collate: ''
+wp_table_prefix: 'wp_'
+wp_debug: false
+wp_admin_email: 'mail@local.local'
+wp_webserver: nginx
+wp_sitename: '${app_ip}.sslip.io'
