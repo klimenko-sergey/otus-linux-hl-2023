@@ -1,0 +1,25 @@
+mysql_user_home: /root
+mysql_user_name: root
+mysql_user_password: root
+mysql_root_home: /root
+mysql_root_username: root
+mysql_root_password: root
+mysql_root_password_update: false
+mysql_enabled_on_startup: true
+mysql_databases:
+  - name: wordpress
+    state: present
+mysql_users:
+  - name: user
+    host: "%"
+    password: 'P@$$w0rd'
+    priv: "wordpress.*:ALL"
+    state: present
+mysql_packages:
+  - mariadb-client
+  - mariadb-server
+  - python-mysqldb
+mysql_python_package_debian: python3-mysqldb
+mysql_port: "3306"
+mysql_bind_address: '0.0.0.0'
+mysql_datadir: /var/lib/mysql

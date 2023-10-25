@@ -21,8 +21,3 @@ variable "service_account_key_file" {
 variable m_subnet_id {
   description = "Subnets for modules"
 }
-# variable m_subnet_nat_id {
-#   description = "Subnet for NAT"
-# }
-# variable m_security_group_ids {
-# }

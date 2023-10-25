@@ -1,0 +1,19 @@
+- src: jdauphant.nginx
+  version: v2.21.2
+
+- src: geerlingguy.mysql
+  version: 4.3.3
+
+# - src: inmotionhosting.wordpress
+#   version: 2.2.0
+
+# - src: Oefenweb.wordpress
+#   version: v4.6.33
+
+# - src: inmotionhosting.apache
+#   version: 2.1.0
+
+- src: inmotionhosting.php_fpm
+  version: 2.2.0
+
+- src: MakarenaLabs.wordpress

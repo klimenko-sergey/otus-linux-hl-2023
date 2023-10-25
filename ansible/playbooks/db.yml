@@ -1,0 +1,8 @@
+---
+- name: Deploy DB
+  hosts: db
+  become: true
+
+  roles:
+    - db
+    - geerlingguy.mysql

@@ -1,0 +1,8 @@
+---
+- name: Deploy PHP-FPM
+  hosts: backend
+  become: true
+
+  roles:
+    - php-fpm
+    - inmotionhosting.php_fpm

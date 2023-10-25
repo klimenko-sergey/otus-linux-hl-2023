@@ -1,0 +1,14 @@
+---
+- name: Change php config
+  hosts: backend
+  become: true
+
+  tasks:
+  - name: replace listen key
+    shell: sed -i 's/^listen = .*/listen = 0.0.0.0:9000/' /etc/php/7.3/fpm/pool.d/www.conf
+    notify: reload php
+
+  handlers:
+  - name: reload php
+    become: true
+    systemd: name=php7.3-fpm state=restarted
