@@ -123,6 +123,11 @@ ___
    cp terraform.tfvars.example terraform.tfvars
    ```
  * Задать в **terraform.tfvars** значения перменным: *cloud_id*, *folder_id*, *public_key_path*, *service_account_key_file*
+ * Выполнить в командной строке для сохранения сертификата в менеджере паролей:
+   ```bash
+   eval `ssh-agent -s`
+   ssh-add ~/.ssh/yakey
+   ```
 
 ### Разворачивание инстансов ВМ с приложением WordPress:
  * В директории **terraform/lab2** репозитория **otus-linux-hl-2023** выполнить инициализацию:
